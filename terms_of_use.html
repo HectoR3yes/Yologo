@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yologo</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Sora:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --color-bg:      #ffffff;
+      --color-card:    #e3e3e3;
+      --color-title:   #0e8af0;
+      --color-body:    #9a9b9c;
+      --color-icon:    #0e8af0;
+      --radius-card:   20px;
+      --shadow-card:   0 8px 40px rgba(14, 138, 240, 0.08),
+                       0 2px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      min-height: 100%;
+      margin: 0;
+    }
+
+    body {
+      background-color: var(--color-bg);
+      font-family: 'DM Sans', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 1.5rem;
+    }
+
+    .close-card {
+      background-color: var(--color-card);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-card);
+      padding: 3rem 2.5rem;
+      width: 100%;
+      text-align: center;
+      animation: card-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .close-card .icon-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 72px;
+      height: 72px;
+      background-color: rgba(14, 138, 240, 0.10);
+      border-radius: 50%;
+      margin-bottom: 1.75rem;
+      animation: pop-in 0.5s 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    }
+
+    .close-card .icon-wrap svg {
+      width: 36px;
+      height: 36px;
+      stroke: var(--color-icon);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .close-card .card-title {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(1.35rem, 4vw, 1.75rem);
+      font-weight: 700;
+      color: var(--color-title);
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+
+    .close-card .text-centered {
+      text-align: center;
+    }
+
+    .close-card .card-message {
+      font-size: clamp(0.9rem, 2.5vw, 1rem);
+      font-weight: 400;
+      color: var(--color-body);
+      line-height: 1.7;
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+    .close-card .divider {
+      width: 48px;
+      height: 3px;
+      background: var(--color-title);
+      border-radius: 99px;
+      margin: 1.25rem auto 1.5rem;
+      opacity: 0.35;
+    }
+
+    @keyframes card-in {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pop-in {
+      from {
+        opacity: 0;
+        transform: scale(0.6);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .close-card {
+        padding: 2.25rem 1.5rem;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .close-card {
+        padding: 3.5rem 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="close-card">
+
+    <div class="icon-wrap">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="8" r="4" />
+        <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+      </svg>
+    </div>
+
+    <h1 class="card-title">TÉRMINOS Y CONDICIONES DE USO DE YOLOGO</h1>
+
+    <div class="divider" role="presentation"></div>
+
+    <div class="card-message">
+
+        <p class="text-centered">Última actualización: Abril 2026</p>
+
+        <p>
+          1. Aceptación de los Términos: Al registrarse, acceder o utilizar la aplicación YOLOGO, el usuario
+          acepta expresamente los presentes Términos y Condiciones de Uso. Si el usuario no está de acuerdo con
+          cualquiera de las disposiciones aquí contenidas, deberá abstenerse de utilizar la plataforma.
+        </p>
+
+        <p>
+          2. Objeto de la Plataforma: YOLOGO es una plataforma tecnológica que permite conectar clientes que
+          requieren servicios automotrices a domicilio con agentes independientes que ofrecen dichos servicios.
+          YOLOGO actúa únicamente como intermediario tecnológico entre ambas partes. La plataforma no presta
+          directamente los servicios de lavado, inflado, revisión u otros servicios automotrices ofrecidos por
+          los agentes.
+        </p>
+
+        <p>
+          3. Registro de Usuarios: Para utilizar determinadas funciones de la plataforma será necesario crear
+          una cuenta. El usuario se compromete a proporcionar información veraz y actualizada, mantener la
+          confidencialidad de sus credenciales de acceso y notificar cualquier uso no autorizado de su cuenta.
+          YOLOGO podrá suspender cuentas que contengan información falsa o que incumplan estos términos.
+        </p>
+
+        <p>
+          4. Servicios Disponibles: La plataforma podrá ofrecer, entre otros, lavado de vehículos, inflado de
+          neumáticos, revisión básica de componentes automotrices y servicios adicionales o complementarios.
+          La disponibilidad de los servicios dependerá de la cobertura geográfica y de la disponibilidad de
+          agentes.
+        </p>
+
+        <p>
+          5. Solicitud y Confirmación de Servicios: Cuando un cliente solicita un servicio, se genera una
+          solicitud dentro de la plataforma, los agentes disponibles podrán aceptarla y una vez aceptada se
+          establecerá una relación directa de prestación del servicio entre cliente y agente. El cliente es
+          responsable de proporcionar información correcta sobre la ubicación y características del servicio
+          solicitado.
+        </p>
+
+        <p>
+          6. Geolocalización: La aplicación utiliza servicios de geolocalización para facilitar la asignación
+          y ejecución de los servicios. Al utilizar la plataforma, el usuario autoriza el uso de su ubicación
+          cuando resulte necesario para operar correctamente los servicios contratados.
+        </p>
+
+        <p>
+          7. Pagos: Los pagos se procesan mediante proveedores externos especializados. YOLOGO no almacena
+          información bancaria sensible ni números completos de tarjetas. El usuario acepta que los precios
+          mostrados en la aplicación podrán incluir cargos adicionales aplicables, que las transacciones estarán
+          sujetas a las políticas del procesador de pagos correspondiente y que los pagos realizados son
+          necesarios para la correcta ejecución de determinados servicios.
+        </p>
+
+        <p>
+          8. Propinas: La plataforma podrá permitir que el cliente otorgue propinas voluntarias al agente.
+          Las propinas son completamente opcionales y no forman parte del precio base del servicio.
+        </p>
+
+        <p>
+          9. Cancelaciones: El cliente podrá cancelar una solicitud siempre que ésta no haya iniciado o
+          conforme a las políticas operativas vigentes dentro de la plataforma. El agente podrá cancelar una
+          solicitud cuando existan causas justificadas que impidan la prestación del servicio. YOLOGO podrá
+          aplicar medidas correctivas en caso de cancelaciones reiteradas o abusivas.
+        </p>
+
+        <p>
+          10. Responsabilidades del Cliente: El cliente se compromete a proporcionar información correcta,
+          facilitar el acceso al vehículo, mantener condiciones razonables para la prestación del servicio y
+          verificar el resultado del servicio antes de confirmarlo como concluido.
+        </p>
+
+        <p>
+          11. Responsabilidades del Agente: El agente es un prestador independiente de servicios y será
+          responsable de ejecutar adecuadamente los servicios aceptados, presentarse en el lugar indicado,
+          mantener una conducta profesional y cumplir con las normas aplicables. El agente es responsable
+          directo de la calidad de los servicios prestados.
+        </p>
+
+        <p>
+          12. Limitación de Responsabilidad de YOLOGO: YOLOGO proporciona únicamente una plataforma tecnológica
+          de intermediación. En consecuencia, no garantiza la calidad específica de los servicios prestados por
+          los agentes, no garantiza la disponibilidad permanente de agentes y no será responsable por daños
+          derivados de actos u omisiones atribuibles directamente al cliente o al agente. No obstante, YOLOGO
+          podrá colaborar en la resolución de controversias cuando resulte posible.
+        </p>
+
+        <p>
+          13. Sistema de Calificaciones: Los usuarios podrán calificar los servicios recibidos o prestados.
+          YOLOGO se reserva el derecho de eliminar comentarios ofensivos, falsos o que incumplan las políticas
+          de la plataforma.
+        </p>
+
+        <p>
+          14. Conductas Prohibidas: Está prohibido utilizar información falsa, suplantar identidades, realizar
+          actividades fraudulentas, interferir con el funcionamiento de la plataforma y utilizar la aplicación
+          para fines ilícitos. El incumplimiento podrá resultar en la suspensión o eliminación permanente de
+          la cuenta.
+        </p>
+
+        <p>
+          15. Suspensión o Terminación de Cuentas: YOLOGO podrá suspender o cancelar cuentas cuando exista
+          incumplimiento de estos términos, se detecte fraude o actividad sospechosa, o existan riesgos para
+          otros usuarios o para la plataforma.
+        </p>
+
+        <p>
+          16. Propiedad Intelectual: Todos los derechos relacionados con la aplicación, logotipos, diseños,
+          software y contenidos pertenecen a YOLOGO o a sus respectivos titulares. Queda prohibida su
+          reproducción sin autorización previa.
+        </p>
+
+        <p>
+          17. Modificaciones: YOLOGO podrá modificar estos Términos y Condiciones cuando resulte necesario
+          para mejorar el servicio o cumplir obligaciones legales. Las modificaciones serán publicadas dentro
+          de la plataforma.
+        </p>
+
+        <p>
+          18. Legislación Aplicable: Estos Términos y Condiciones se regirán por las leyes aplicables de los
+          Estados Unidos Mexicanos. Cualquier controversia será sometida a las autoridades competentes conforme
+          a la legislación mexicana.
+        </p>
+
+        <p>
+          19. Contacto: Para cualquier consulta relacionada con estos Términos y Condiciones, los usuarios
+          podrán comunicarse mediante los canales oficiales de atención de YOLOGO. Al utilizar la aplicación,
+          el usuario reconoce haber leído, comprendido y aceptado los presentes Términos y Condiciones.
+        </p>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yologo</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Sora:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --color-bg:      #ffffff;
+      --color-card:    #e3e3e3;
+      --color-title:   #0e8af0;
+      --color-body:    #9a9b9c;
+      --color-icon:    #0e8af0;
+      --radius-card:   20px;
+      --shadow-card:   0 8px 40px rgba(14, 138, 240, 0.08),
+                       0 2px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      min-height: 100%;
+      margin: 0;
+    }
+
+    body {
+      background-color: var(--color-bg);
+      font-family: 'DM Sans', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 1.5rem;
+    }
+
+    .close-card {
+      background-color: var(--color-card);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-card);
+      padding: 3rem 2.5rem;
+      width: 100%;
+      text-align: center;
+      animation: card-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .close-card .icon-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 72px;
+      height: 72px;
+      background-color: rgba(14, 138, 240, 0.10);
+      border-radius: 50%;
+      margin-bottom: 1.75rem;
+      animation: pop-in 0.5s 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    }
+
+    .close-card .icon-wrap svg {
+      width: 36px;
+      height: 36px;
+      stroke: var(--color-icon);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .close-card .card-title {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(1.35rem, 4vw, 1.75rem);
+      font-weight: 700;
+      color: var(--color-title);
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+
+    .close-card .text-centered {
+      text-align: center;
+    }
+
+    .close-card .card-message {
+      font-size: clamp(0.9rem, 2.5vw, 1rem);
+      font-weight: 400;
+      color: var(--color-body);
+      line-height: 1.7;
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+    .close-card .divider {
+      width: 48px;
+      height: 3px;
+      background: var(--color-title);
+      border-radius: 99px;
+      margin: 1.25rem auto 1.5rem;
+      opacity: 0.35;
+    }
+
+    @keyframes card-in {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pop-in {
+      from {
+        opacity: 0;
+        transform: scale(0.6);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .close-card {
+        padding: 2.25rem 1.5rem;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .close-card {
+        padding: 3.5rem 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="close-card">
+
+    <div class="icon-wrap">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+      </svg>
+    </div>
+
+    <h1 class="card-title">POLÍTICA DE PRIVACIDAD DE YOLOGO</h1>
+
+    <div class="divider" role="presentation"></div>
+
+    <div class="card-message">
+
+      <p class="text-centered">Última actualización: Abril 2026</p>
+
+      <p>
+        1. Introducción: Bienvenido a YOLOGO. La presente Política de Privacidad describe cómo recopilamos,
+        utilizamos, almacenamos y protegemos la información personal de los usuarios que utilizan la aplicación
+        móvil YOLOGO. Al utilizar la aplicación, el usuario acepta los términos establecidos en esta Política
+        de Privacidad.
+      </p>
+
+      <p>
+        2. Responsable del Tratamiento de Datos: YOLOGO es responsable del tratamiento de los datos personales
+        recopilados a través de la aplicación, conforme a la legislación aplicable en materia de protección de
+        datos personales. Para cualquier consulta relacionada con privacidad o protección de datos, los usuarios
+        podrán contactar a YOLOGO a través de los medios de contacto proporcionados dentro de la aplicación.
+      </p>
+
+      <p>
+        3. Información que Recopilamos: Podemos recopilar la siguiente información. En cuanto a información de
+        registro: nombre completo, correo electrónico, número telefónico y fotografía de perfil si el usuario
+        decide proporcionarla. En cuanto a información de ubicación, con autorización del usuario la aplicación
+        puede acceder a la ubicación GPS actual y coordenadas geográficas necesarias para solicitar o prestar
+        servicios; esta información se utiliza exclusivamente para localizar servicios cercanos, mostrar
+        solicitudes disponibles y verificar la ubicación de prestación del servicio. En cuanto a información de
+        servicios, se recopila el historial de solicitudes, fechas y horarios de servicios, estado de los
+        servicios, y calificaciones y comentarios. En cuanto a información de pago, los pagos son procesados
+        mediante plataformas externas especializadas y YOLOGO no almacena números completos de tarjetas
+        bancarias ni información financiera sensible.
+      </p>
+
+      <p>
+        4. Uso de la Información: La información recopilada podrá utilizarse para crear y administrar cuentas
+        de usuario, procesar solicitudes de servicio, facilitar la conexión entre clientes y agentes, gestionar
+        pagos y transacciones, mejorar la experiencia dentro de la aplicación, atender solicitudes de soporte,
+        detectar actividades fraudulentas o uso indebido de la plataforma, y cumplir obligaciones legales
+        aplicables.
+      </p>
+
+      <p>
+        5. Compartición de Información: YOLOGO no vende información personal a terceros. Sin embargo, ciertos
+        datos podrán compartirse cuando sea necesario para operar la plataforma, incluyendo con proveedores de
+        servicios como Stripe para el procesamiento de pagos y Google Maps Platform para servicios de ubicación
+        y mapas, así como con autoridades competentes cuando exista una obligación legal o requerimiento formal
+        de por medio.
+      </p>
+
+      <p>
+        6. Geolocalización: La aplicación utiliza servicios de geolocalización para permitir la correcta
+        operación de los servicios solicitados. El usuario puede revocar los permisos de ubicación desde la
+        configuración de su dispositivo, aunque ciertas funciones podrían dejar de estar disponibles.
+      </p>
+
+      <p>
+        7. Seguridad de la Información: YOLOGO implementa medidas razonables de seguridad para proteger la
+        información personal contra acceso no autorizado, alteración, divulgación y destrucción indebida. Sin
+        embargo, ningún sistema electrónico puede garantizar una seguridad absoluta.
+      </p>
+
+      <p>
+        8. Conservación de Datos: La información será conservada durante el tiempo necesario para operar la
+        plataforma, cumplir obligaciones legales y resolver disputas o reclamaciones. Posteriormente podrá ser
+        eliminada o anonimizada.
+      </p>
+
+      <p>
+        9. Derechos del Usuario: Los usuarios podrán solicitar acceso a sus datos personales, corrección de
+        información incorrecta, eliminación de datos cuando sea legalmente procedente, y limitación del uso de
+        determinada información. Las solicitudes podrán realizarse mediante los canales de contacto
+        proporcionados por YOLOGO.
+      </p>
+
+      <p>
+        10. Menores de Edad: La aplicación está destinada únicamente para usuarios mayores de edad o que
+        cuenten con autorización legal suficiente para contratar servicios. YOLOGO no recopila intencionalmente
+        información de menores de edad.
+      </p>
+
+      <p>
+        11. Cambios a esta Política: YOLOGO podrá actualizar esta Política de Privacidad en cualquier momento
+        para reflejar cambios operativos, legales o tecnológicos. Las modificaciones serán publicadas dentro de
+        la aplicación y entrarán en vigor a partir de su publicación.
+      </p>
+
+      <p>
+        12. Contacto: Para cualquier duda relacionada con esta Política de Privacidad, los usuarios podrán
+        comunicarse con YOLOGO mediante los medios de contacto oficiales disponibles dentro de la aplicación.
+        Al utilizar la aplicación, el usuario reconoce haber leído y aceptado la presente Política de
+        Privacidad.
+      </p>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
